@@ -12,7 +12,7 @@ public class Payroll {
     // Compute total salary before tax
     public double getGlobalTotalSalary() {
         return workers.stream()
-                .mapToDouble(Worker::getTotalSalary)
+                .mapToDouble(Worker::calculateTotalSalary)
                 .sum();
     }
 

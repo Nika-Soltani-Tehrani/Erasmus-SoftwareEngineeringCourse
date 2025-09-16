@@ -7,9 +7,9 @@ public class Main {
         List<Worker> workers = new ArrayList<>();
 
         // Example workers
-        workers.add(new Worker("Alice", 3000, 500, 1));
-        workers.add(new Worker("Bob", 2800, 700, 1));
-        workers.add(new Worker("Charlie", 3200, 450, 4));
+        workers.add(new Worker("Nika", 3000, 500));
+        workers.add(new Worker("Nikoleta", 2800, 700));
+        workers.add(new Worker("Nikolas", 3200, 450));
 
         // Create Payroll with 15% global tax
         Payroll payroll = new Payroll(workers, 0.15);
