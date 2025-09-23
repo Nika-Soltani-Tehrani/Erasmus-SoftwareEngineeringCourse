@@ -2,7 +2,8 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        // Create list of Persons
+        Sorter sorter = new Sorter();
+
         List<Person> people = new ArrayList<>();
         people.add(new Person("Nika", "Soltani"));
         people.add(new Person("Nikoleta", "Manavi"));
@@ -15,14 +16,14 @@ public class Main {
             p.printPersonName();
         }
 
-        Collections.sort(people);
+        Person[] peopleArray = people.toArray(new Person[0]);
+        sorter.sort(peopleArray);
 
         System.out.println("\nAfter sorting Persons:");
-        for (Person p : people) {
+        for (Person p : peopleArray) {
             p.printPersonName();
         }
 
-        // Create list of Rectangles
         List<Rectangle> rectangles = new ArrayList<>();
         rectangles.add(new Rectangle(2.0, 5.0));
         rectangles.add(new Rectangle(4.0, 4.0));
@@ -35,10 +36,11 @@ public class Main {
             System.out.println("Rectangle area: " + r.calculateArea());
         }
 
-        Collections.sort(rectangles);
+        Rectangle[] rectangleArray = rectangles.toArray(new Rectangle[0]);
+        sorter.sort(rectangleArray);
 
         System.out.println("\nAfter sorting Rectangles:");
-        for (Rectangle r : rectangles) {
+        for (Rectangle r : rectangleArray) {
             System.out.println("Rectangle area: " + r.calculateArea());
         }
     }
