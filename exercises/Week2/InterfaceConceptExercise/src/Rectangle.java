@@ -1,6 +1,4 @@
-import java.awt.*;
-
-public class Rectangle implements Comparable<Rectangle> {
+public class Rectangle implements MyComparable<Rectangle> {
 
     private double width;
     private double height;
@@ -10,14 +8,14 @@ public class Rectangle implements Comparable<Rectangle> {
         this.height = height;
     }
 
-    public double calculateArea(){
+    public double calculateArea() {
         return width * height;
     }
 
     @Override
     public int compareTo(Rectangle other) {
-        double area1 = width * height;
-        double area2 = other.width * other.height;
+        double area1 = this.calculateArea();
+        double area2 = other.calculateArea();
         return Double.compare(area1, area2);
     }
 }

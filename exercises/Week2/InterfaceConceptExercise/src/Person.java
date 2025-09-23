@@ -1,4 +1,4 @@
-public class Person implements Comparable<Person> {
+public class Person implements MyComparable<Person> {
 
     protected String name;
     protected String surname;
